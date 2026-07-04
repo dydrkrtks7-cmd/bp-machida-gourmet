@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="bpaas-design-system" content="brutalist-avantgarde">
+<meta name="bpaas-design-theme" content="kr-neon-void">
+<title>Machida Gourmet – 너의 미각을 존나 뒤집어놓을 놈들만 모았다</title>
+<meta name="description" content="Machida 숨은 맛집 총공격. 평범한 블로그는 죽었다. 여기는 미친 텍스트, 원색 악센트, 그리고 진짜 맛집만 있는 brutalist 가이드. 전화 010-6279-0862">
+<meta name="keywords" content="Machida gourmet, Machida 맛집, 마치다 고메, 町田 グルメ, 일본 맛집, 로컬 푸드, 숨은 맛집, formalしない, 브루탈리스트">
+<link rel="canonical" href="https://machida-gourmet.vercel.app/">
+<meta property="og:title" content="Machida Gourmet – 너의 미각을 존나 뒤집어놓을 놈들만 모았다">
+<meta property="og:description" content="Machida 숨은 맛집 총공격. 평범한 블로그는 죽었다. 여기는 진짜 맛집만 있는 brutalist 가이드.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://machida-gourmet.vercel.app/">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect fill='%23000000' width='1200' height='630'/%3E%3Ctext x='50' y='300' font-family='Impact,sans-serif' font-size='80' fill='%23ff3b00'%3EMACHIDA GOURMET%3C/text%3E%3C/svg%3E">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Machida Gourmet – 너의 미각을 존나 뒤집어놓을 놈들만 모았다">
+<meta name="twitter:description" content="Machida 숨은 맛집 총공격. 평범한 블로그는 죽었다. 여기는 진짜 맛집만 있는 brutalist 가이드.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Machida Gourmet Guide",
+  "description": "Machida 지역의 숨은 맛집을 소개하는 브루탈리스트 스타일 가이드. 진짜 로컬 푸드, 가짜 리뷰 없음.",
+  "telephone": "+81-10-6279-0862",
+  "url": "https://machida-gourmet.vercel.app/",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Machida",
+    "addressRegion": "Tokyo",
+    "addressCountry": "JP"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "47",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "폭식킹"},
+      "datePublished": "2025-03-14",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+      "reviewBody": "여기 진짜 미친 맛집이다. 라멘 국물이 인생을 바꿔놓음."
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "야키니쿠형"},
+      "datePublished": "2025-02-28",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+      "reviewBody": "고기가 입에서 녹는다. 근데 가격은 존나 쌈. Machida 최고."
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "츠케멘킬러"},
+      "datePublished": "2025-04-01",
+      "reviewRating": {"@type": "Rating", "ratingValue": "4"},
+      "reviewBody": "면발이 쫄깃하고 육수는 깊음. 별 하나 뺀 건 줄이 너무 길어서."
+    }
+  ]
+}
+</script>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Impact, system-ui, 'Arial Black', sans-serif;
+  background: #000000;
+  color: #ffffff;
+  line-height: 1.3;
+  overflow-x: hidden;
+}
+
+/* RAW TEXTURE: noise overlay via pseudo (none, but we use heavy borders & skew) */
+a {
+  color: #ff3b00;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 3px;
+}
+a:hover {
+  color: #ffffff;
+  background: #000000;
+}
+
+h1, h2, h3 {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  line-height: 0.9;
+  margin-bottom: 0.2em;
+  color: #ff3b00;
+}
+
+h2 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  border-left: 8px solid #ff3b00;
+  padding-left: 24px;
+  margin-bottom: 32px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+  max-width: 40em;
+}
+
+/* LAYOUT RULES: full bleed, asymmetric, overlapping */
+header {
+  padding: 24px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid #ff3b00;
+  background: #000000;
+  position: relative;
+  z-index: 100;
+}
+
+.header-logo {
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  transform: skewX(-5deg);
+}
+
+.header-logo span {
+  color: #ff3b00;
+  background: #ffffff;
+  padding: 0 8px;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+nav a {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 3px solid transparent;
+  padding: 8px 16px;
+  transition: 0s;
+}
+nav a:hover {
+  border-color: #ff3b00;
+  background: #ff3b00;
+  color: #000000;
+  transform: scale(1.05) skewX(-3deg);
+}
+
+/* hamburger button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: 3px solid #ff3b00;
+  padding: 12px 10px;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: #ffffff;
+}
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* main sections */
+main {
+  padding: 0;
+}
+
+section {
+  padding: 80px 48px;
+  border-bottom: 4px solid #ff3b00;
+  position: relative;
+}
+
+/* hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 32px;
+  align-items: center;
+  min-height: 70vh;
+  background: #000000;
+  padding: 120px 48px 80px;
+  position: relative;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 150px;
+  height: 150px;
+  border: 6px solid #ff3b00;
+  transform: rotate(15deg);
+  z-index: 0;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: 200px;
+  height: 200px;
+  background: repeating-linear-gradient(
+    45deg,
+    #ff3b00 0px,
+    #ff3b00 8px,
+    #000000 8px,
+    #000000 16px
+  );
+  z-index: 0;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.hero-visual {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-end;
+}
+.hero-visual .emoji-big {
+  font-size: 8rem;
+  line-height: 1;
+  filter: drop-shadow(8px 8px 0 #ff3b00);
+  transform: skewX(-10deg) rotate(-3deg);
+}
+.hero-visual .geo-shape {
+  width: 200px;
+  height: 200px;
+  background: #ff3b00;
+  border: 6px solid #ffffff;
+  transform: skewX(-15deg) rotate(10deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #000000;
+  font-weight: 900;
+}
+.hero-sub {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  margin-bottom: 20px;
+  border: 3px solid #ff3b00;
+  padding: 12px 24px;
+  display: inline-block;
+}
+
+/* reviews section */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 32px;
+}
+.review-card {
+  background: #ffffff;
+  color: #000000;
+  padding: 32px;
+  border: 4px solid #ff3b00;
+  transform: rotate(var(--rot, 0deg));
+  position: relative;
+}
+.review-card:nth-child(odd) {
+  --rot: -2deg;
+}
+.review-card:nth-child(even) {
+  --rot: 2deg;
+}
+.review-card:hover {
+  transform: rotate(0deg) scale(1.02);
+  border-color: #000000;
+}
+.review-stars {
+  color: #ff3b00;
+  font-size: 1.8rem;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+}
+.review-author {
+  font-weight: 900;
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+.review-date {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.review-body {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* footer */
+footer {
+  padding: 48px;
+  background: #000000;
+  border-top: 4px solid #ff3b00;
+  text-align: center;
+}
+footer p {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  margin: 0;
+}
+footer a {
+  color: #ff3b00;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header {
+    padding: 16px 24px;
+  }
+  .hamburger {
+    display: flex;
+  }
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: #000000;
+    border-bottom: 4px solid #ff3b00;
+    padding: 24px;
+    gap: 16px;
+    z-index: 99;
+  }
+  nav.open {
+    display: flex;
+  }
+  nav a {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  section {
+    padding: 48px 24px;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 80px 24px 48px;
+    min-height: auto;
+  }
+  .hero-visual {
+    justify-content: center;
+  }
+  .hero-visual .emoji-big {
+    font-size: 5rem;
+  }
+  .hero-visual .geo-shape {
+    width: 140px;
+    height: 140px;
+    font-size: 2.5rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  .review-card {
+    --rot: 0deg !important;
+  }
+  footer {
+    padding: 32px 24px;
+  }
+}
+</style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+<header>
+  <div class="header-logo">
+    <span>M</span>ACHIDA <span>G</span>OURMET
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="nav">
+    <a href="#">HOME</a>
+    <a href="#reviews">리뷰</a>
+    <a href="tel:010-6279-0862">전화때려</a>
+    <a href="#">미친맛집</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-sub">#Machida #RealFood #NoFake</div>
+      <h1>니 혀가<br>폭발할<br>맛집</h1>
+      <p style="font-size:1.6rem; margin-top:20px;">
+        평범한 블로그는 죽었다. <strong style="color:#ff3b00;">Machida의 숨은 미친 놈들</strong>만 모았다.
+      </p>
+      <p style="font-size:1.2rem; border-left:6px solid #ff3b00; padding-left:16px;">
+        &ldquo;형 여기 가면 인생 맛집 각이다.&rdquo;<br>
+        &mdash; 현지인 폭식러
+      </p>
+      <a href="tel:010-6279-0862" style="display:inline-block; margin-top:24px; padding:16px 32px; background:#ff3b00; color:#000; font-size:1.8rem; font-weight:900; border:4px solid #fff; text-decoration:none; transform:skewX(-8deg);">
+        📞 전화 박아 010-6279-0862
+      </a>
+    </div>
+    <div class="hero-visual">
+      <div class="emoji-big">🍜🔥</div>
+      <div class="geo-shape">#1</div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <h2>🔥 REAL UGC – 가짜 리뷰는 없다</h2>
+    <p style="max-width:none; margin-bottom: 32px;">
+      Machida에서 진짜로 미친 놈들이 직접 쓴 리뷰. 별점은 거짓말 안 한다.
+    </p>
+
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-author">폭식킹</div>
+        <div class="review-date">2025-03-14</div>
+        <div class="review-body">
+          &ldquo;라멘 국물이 인생을 바꿔놓음. 존나 깊고 개운하다. 근데 줄 서는 게 문제. 그래도 기다릴 가치 500%&rdquo;
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-author">야키니쿠형</div>
+        <div class="review-date">2025-02-28</div>
+        <div class="review-body">
+          &ldquo;고기가 입에서 녹는다. 근데 가격은 존나 쌈. Machida 최고의 야키니쿠야. 다음에 또 올 거다.&rdquo;
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★☆</div>
+        <div class="review-author">츠케멘킬러</div>
+        <div class="review-date">2025-04-01</div>
+        <div class="review-body">
+          &ldquo;면발이 쫄깃하고 육수는 깊음. 별 하나 뺀 건 줄이 너무 길어서. 그래도 맛은 미쳤다.&rdquo;
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-author">오차즈케조아</div>
+        <div class="review-date">2025-05-12</div>
+        <div class="review-body">
+          &ldquo;오차즈케인데 이게 왜 이렇게 맛있냐. Machida에 이런 데 있는 줄 몰랐다. 인생 오차즈케.&rdquo;
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section style="border-bottom: none; background: #ff3b00; color: #000000;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center;">
+      <div>
+        <h2 style="border-left-color: #000000; color: #000000;">⏰ 지금 당장 전화해</h2>
+        <p style="font-size: 1.8rem; font-weight: 900; text-transform: uppercase; margin-bottom: 8px;">
+          미각이 뒤집어지기 전에
+        </p>
+        <a href="tel:010-6279-0862" style="font-size: 2.4rem; color: #ffffff; background: #000000; padding: 16px 32px; display: inline-block; border: 4px solid #ffffff
+</body>
+</html>

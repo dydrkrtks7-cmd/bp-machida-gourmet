@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="bpaas-design-system" content="brutalist-avantgarde">
+<meta name="bpaas-design-theme" content="kr-neon-void">
+<title>Machida Gourmet 블로그 – 진짜 맛집만 때려박는다</title>
+<meta name="description" content="Machida 숨은 맛집 총공격. 평범한 블로그는 죽었다. 여기는 미친 텍스트, 원색 악센트, 그리고 진짜 맛집만 있는 brutalist 가이드. 전화 010-6279-0862">
+<meta name="keywords" content="Machida gourmet, Machida 맛집, 마치다 고메, 町田 グルメ, 일본 맛집, 로컬 푸드, 숨은 맛집, formalしない, 브루탈리스트, 블로그">
+<link rel="canonical" href="https://machida-gourmet.vercel.app/blog">
+<meta property="og:title" content="Machida Gourmet 블로그 – 니가 본 놈들은 가짜야">
+<meta property="og:description" content="Machida 숨은 맛집 총공격. 평범한 블로그는 죽었다. 여기는 미친 텍스트, 원색 악센트, 그리고 진짜 맛집만 있는 brutalist 가이드. 전화 010-6279-0862">
+<meta property="og:url" content="https://machida-gourmet.vercel.app/blog">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://machida-gourmet.vercel.app/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Machida Gourmet 블로그 – 너의 미각을 존나 뒤집어놓을 놈들만 모았다">
+<meta name="twitter:description" content="Machida 숨은 맛집 총공격. 평범한 블로그는 죽었다. 여기는 미친 텍스트, 원색 악센트, 그리고 진짜 맛집만 있는 brutalist 가이드. 전화 010-6279-0862">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+a { color: #ff0055; text-decoration: none; border-bottom: 2px solid transparent; transition: border-color 0.2s, color 0.2s; }
+a:hover { border-bottom-color: #ff0055; color: #ff3366; }
+h1, h2, h3 { font-weight: 900; text-transform: uppercase; letter-spacing: -0.02em; }
+h1 { font-size: clamp(2.5rem, 8vw, 5rem); line-height: 0.9; color: #ff0055; text-shadow: 4px 4px 0 #00ffff; margin-bottom: 0.5rem; }
+h2 { font-size: clamp(1.8rem, 5vw, 3rem); color: #00ffff; border-left: 8px solid #ff0055; padding-left: 0.5rem; margin-bottom: 1rem; }
+h3 { font-size: clamp(1.2rem, 3vw, 1.8rem); color: #ffcc00; }
+p { font-size: 1.1rem; margin-bottom: 1.2rem; max-width: 70ch; }
+header { background: #111; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid #ff0055; position: relative; z-index: 100; }
+.header-logo { font-size: 2rem; font-weight: 900; color: #ff0055; text-transform: uppercase; letter-spacing: -0.03em; line-height: 1; }
+.header-logo span { color: #00ffff; }
+nav { display: flex; gap: 1.5rem; align-items: center; }
+nav a { font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.05em; padding: 0.3rem 0; border-bottom: 2px solid transparent; }
+nav a:hover { border-bottom-color: #ff0055; }
+.hamburger-menu { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+.hamburger-menu span { width: 30px; height: 4px; background: #ff0055; display: block; transition: 0.3s; }
+.tel-link { background: #ff0055; color: #0a0a0a !important; padding: 0.5rem 1.2rem; font-weight: 900; border: 2px solid #00ffff; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; transition: background 0.2s, color 0.2s; }
+.tel-link:hover { background: #00ffff; color: #0a0a0a !important; border-color: #ff0055; }
+main { flex: 1; padding: 2rem; max-width: 1200px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr; gap: 2rem; }
+.blog-entry { background: #151515; padding: 2rem; border: 4px solid #ff0055; box-shadow: 8px 8px 0 #00ffff; transform: rotate(-0.5deg); transition: transform 0.2s; }
+.blog-entry:hover { transform: rotate(0deg); box-shadow: 12px 12px 0 #ff0055; }
+.blog-entry h2 { margin-top: 0; }
+.blog-meta { display: flex; gap: 1.5rem; font-size: 0.85rem; color: #888; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; border-bottom: 1px solid #333; padding-bottom: 0.5rem; }
+.blog-meta span { display: flex; align-items: center; gap: 0.3rem; }
+.blog-content p { font-size: 1.05rem; }
+.blog-content strong { color: #ffcc00; }
+.blog-content em { color: #00ffff; font-style: normal; font-weight: 700; }
+.cta-box { background: #0a0a0a; border: 3px solid #00ffff; padding: 1.5rem; margin: 2rem 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; }
+.cta-box p { margin: 0; font-weight: 700; font-size: 1.1rem; color: #ff0055; }
+.cta-box a { background: #ff0055; color: #0a0a0a; padding: 0.6rem 1.8rem; font-weight: 900; border: 2px solid #ffcc00; text-transform: uppercase; letter-spacing: 0.05em; transition: background 0.2s, color 0.2s; }
+.cta-box a:hover { background: #00ffff; border-color: #ff0055; color: #0a0a0a; }
+footer { background: #111; padding: 2rem; text-align: center; border-top: 4px solid #00ffff; margin-top: auto; }
+footer p { font-size: 0.85rem; color: #666; max-width: none; }
+footer a { color: #ff0055; }
+@media (max-width: 768px) {
+  header { flex-wrap: wrap; padding: 1rem; }
+  .header-logo { font-size: 1.5rem; }
+  .hamburger-menu { display: flex; }
+  nav { display: none; width: 100%; flex-direction: column; gap: 0.8rem; padding: 1rem 0; border-top: 2px solid #333; margin-top: 0.5rem; }
+  nav.active { display: flex; }
+  .tel-link { align-self: flex-start; }
+  main { padding: 1rem; }
+  .blog-entry { padding: 1.5rem; box-shadow: 4px 4px 0 #00ffff; transform: none; }
+  .blog-entry:hover { transform: none; box-shadow: 6px 6px 0 #ff0055; }
+  .cta-box { flex-direction: column; text-align: center; }
+}
+</style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+<header>
+  <div class="header-logo">MACHIDA<span>GOURMET</span></div>
+  <div class="hamburger-menu" onclick="document.querySelector('nav').classList.toggle('active')">
+    <span></span><span></span><span></span>
+  </div>
+  <nav>
+    <a href="/">홈</a>
+    <a href="/blog">블로그</a>
+    <a href="/about">어바웃</a>
+    <a href="/contact">컨택</a>
+    <a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a>
+  </nav>
+</header>
+
+<main>
+  <article class="blog-entry">
+    <h2>진짜 맛집은 인스타에 없다</h2>
+    <div class="blog-meta">
+      <span>📅 2025.04.08</span>
+      <span>✍️ 마치다 정찰대</span>
+      <span>🏷️ Machida 맛집</span>
+    </div>
+    <div class="blog-content">
+      <p>니들 인스타에서 반짝이는 사진에 속아서 줄 서 본 적 있지? <strong>여긴 그런 거 없다.</strong> Machida에 숨은 놈들은 간판도 없고, SNS도 안 한다. 그냥 <em>맛</em> 하나로 승부본다.</p>
+      <p>내가 직접 발로 뛰고, 혀가 찢어지도록 먹고 골랐다. 오늘은 그중 하나를 공개한다.</p>
+      
+      <h3>🍜 역전 라멘 — 이름 없는 골목의 신</h3>
+      <p>JR 마치다역 남쪽 출구에서 5분, 골목 끝에 있다. 간판은 없다. 그냥 <strong>빨간 커튼</strong>이 전부다. 주인장은 60대 아저씨, 말수가 적다. 하지만 그가 내미는 그릇은 <em>예술</em>이다.</p>
+      <p>돼지뼈 육수에 48시간 졸인 간장타레, 면은 주문 즉시 삶는다. 차슈는 불맛이 배어 있고, 반숙 계란은 <strong>흐느적거리다가 입안에서 터진다.</strong> 한 그릇에 800엔. 이 가격에 이 퀄리티는 <span style="color:#ff0055;font-weight:900;">사기</span>다.</p>
+      <p>팁: 낮 12시부터 오후 2시까지만 연다. 재료 소진 시 조기 마감. <em>늦으면 니 손해다.</em></p>
+
+      <div class="cta-box">
+        <p>🔥 더 많은 숨은 맛집이 알고 싶으면?</p>
+        <a href="tel:010-6279-0862">전화로 물어봐</a>
+      </div>
+
+      <p>이런 곳을 블로그에 올리는 게 내 원칙은 아니다. 하지만 Machida의 진짜 맛을 죽이기엔 아깝다. <strong>니가 진짜 미식가라면</strong> 인스타 껐다. 그리고 이 번호로 전화해라. <a href="tel:010-6279-0862">010-6279-0862</a></p>
+      <p>다음 편에는 <em>야키니쿠의 성지</em>를 털어준다. 기다려라.</p>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <p>© 2025 Machida Gourmet — 너의 미각을 존나 뒤집어놓을 놈들만 모았다. <a href="tel:010-6279-0862">010-6279-0862</a></p>
+</footer>
+
+<script>
+document.querySelector('.hamburger-menu').addEventListener('click', function() {
+  document.querySelector('nav').classList.toggle('active');
+});
+</script>
+
+</body>
+</html>
