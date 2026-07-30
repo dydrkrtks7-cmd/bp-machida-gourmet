@@ -1,67 +1,307 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="bpaas-design-system" content="brutalist-avantgarde">
-<meta name="bpaas-design-theme" content="kr-neon-void">
-<title>정보 – Machida Gourmet</title>
-<meta name="description" content="Machida 맛집 정보 총정리. 가짜 리뷰는 없음. 오직 직구, 원색, 진짜. 전화 010-6279-0862">
-<meta name="keywords" content="Machida gourmet, Machida 맛집, 마치다 고메, 町田 グルメ, 정보, 연락처, FAQ, 로컬 푸드">
-<link rel="canonical" href="https://machida-food-local.pbn-builder.xyz/about.html">
-<meta property="og:title" content="Machida Gourmet 정보 – 너가 알던 그런 블로그 아님">
-<meta property="og:description" content="Machida 숨은 맛집 정보. 진짜 주소, 진짜 번호, 진짜 팁. 가식 버려라.">
-<meta property="og:url" content="https://machida-food-local.pbn-builder.xyz/about.html">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="ko_KR">
-<meta name="robots" content="index, follow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machida gourmet 안내 — 완벽한 마무리를 위한 최종 정산과 선택 기준</title>
+    <meta name="description" content="마치다 gourmet 안내. 단순한 맛집 탐방을 넘어 모임의 완성도를 결정하는 최종 정산 방식, 시간 연장 및 조기 종료 대응, 그리고 다음 방문을 위한 사후 기록 기준까지 완벽히 비교해 드립니다.">
+    <meta name="keywords" content="Machida gourmet 안내, 마치다 맛집, 마치다 모임 정산, 마치다 회식 선택">
+    <link rel="canonical" href="https://machida-food-local.pbn-builder.xyz/about.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://machida-food-local.pbn-builder.xyz/about.html">
+    <meta property="og:title" content="Machida gourmet 안내 — 완벽한 마무리를 위한 최종 정산과 선택 기준">
+    <meta property="og:description" content="단순한 맛집 탐방을 넘어 모임의 완성도를 결정하는 최종 정산 방식, 시간 연장 및 조기 종료 대응, 그리고 다음 방문을 위한 사후 기록 기준까지 완벽히 비교해 드립니다.">
+
+    <style>
+        /* CSS Reset & Variables */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #141414;
+            --bg-tertiary: #1e1e1e;
+            --text-primary: #f5f5f7;
+            --text-secondary: #a1a1a6;
+            --accent-color: #d4af37;
+            --accent-hover: #f3e5ab;
+            --border-color: #2c2c2e;
+            --font-serif: 'Playfair Display', 'Noto Serif KR', serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.7;
+            letter-spacing: -0.02em;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-primary);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            letter-spacing: -0.03em;
+            margin-bottom: var(--spacing-md);
+        }
+
+        h2 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin-bottom: var(--spacing-sm);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--accent-color);
+            margin-bottom: 0.8rem;
+        }
+
+        p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Header & Navigation */
+        .v-main-1wdk-container {
+            width: 100%;
+            background-color: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .v-item-bi6p {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.2rem var(--spacing-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .r-ico-r2x5 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--accent-color);
+            text-decoration: none;
+            letter-spacing: 0.1em;
+        }
+
+        .v-main-1wdk-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .v-main-1wdk-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.3s ease;
+        }
+
+        .v-main-1wdk-link:hover {
+            color: var(--accent-color);
+        }
+
+        /* Layout & Sections */
+        .hero-section {
+            padding: var(--spacing-lg) var(--spacing-md);
+            max-width: 1200px;
+            margin: 0 auto;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-lg);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-lg) var(--spacing-md);
+        }
+
+        @media (min-width: 768px) {
+            .editorial-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .full-width-column {
+                grid-column: span 2;
+            }
+        }
+
+        .editorial-card {
+            background-color: var(--bg-secondary);
+            padding: 2.5rem;
+            border-left: 3px solid var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+
+        .editorial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Lists and Details */
+        .styled-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .styled-list li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .styled-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        /* FAQ Accordion Style */
+        .faq-section {
+            background-color: var(--bg-tertiary);
+            padding: var(--spacing-lg) var(--spacing-md);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: var(--spacing-md) var(--spacing-md);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        footer p {
+            text-align: center;
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 <body>
-<header>
-  <div class="header-logo">MACHIDA GOURMET</div>
-  <nav class="nav-present">
-    <a href="/">홈</a>
-    <a href="/list">맛집</a>
-    <a href="/info" class="active">정보</a>
-    <a href="tel:010-6279-0862" class="tel-link">전화</a>
-  </nav>
-  <div class="hamburger-menu">☰</div>
-</header>
-<main>
-  <h1>정보 씨게 박아드림</h1>
-  <section>
-    <h2>이 사이트 뭐하는 데냐</h2>
-    <p>존나 솔직한 Machida 맛집 가이드. 평범한 블로그는 뒤졌다. 여기는 원색 악센트, 미친 텍스트, 그리고 진짜 배 터지게 먹은 놈들만 모았다. 가짜 리뷰? 없음. 협찬? 씹창. 걍 내 돈 내가 쓰고 느낀 그대로다.</p>
-    <p>타겟은 단 하나: Machida에서 진짜 맛집 찾아 헤매는 니 새끼들. 뻔한 체인점? 노상관. 골목 구석, 현지인만 아는 곳, 주인장이 좀 미친 곳만 때려박았다.</p>
-  </section>
-  <section>
-    <h2>FAQ — 니가 개궁금해할 점들</h2>
-    <ul>
-      <li><strong>왜 이렇게 텍스트가 겁나 크고 쌔냐?</strong> — 보라는 게 아니라 느끼라는 거다. 브루탈리스트 디자인은 포장 버리고 본질만 던진다. 너의 미각이 뒤집어질 준비나 해라.</li>
-      <li><strong>정보 진짜임?</strong> — 100% 내 발로 뛰고 내 혀로 확인했다. 업주가 사정 있어서 문 닫았으면 업데이트함. 근데 내가 매일 체크하진 않으니까 니가 가기 전에 전화해라.</li>
-      <li><strong>전화번호는 왜 공개함?</strong> — 가게에 직접 확인하는 게 제일 확실하니까. 010-6279-0862는 내 번호 아님. 각 가게 번호는 맛집 페이지에 적혀 있다.</li>
-      <li><strong>니네 협찬 받냐?</strong> — ㅋㅋㅋ 협찬? 그런 거 받으면 내 입맛이 팔려간다. 안 받는다. 절대. 씨발 절대.</li>
-    </ul>
-  </section>
-  <section>
-    <h2>지역 시그널 — Machida 놀러온 새끼들 봐라</h2>
-    <p>Machida는 도쿄랑 가나가와 경계에 있는 겁나 핫한 동네다. JR Yokohama Line, Odakyu Line 둘 다 지나가고, 역 주변은 백화점, 번화가, 뒤로는 골목 미식 지옥. 니가 찾는 맛집은 대부분 역에서 도보 10분 이내에 있지만, 진짜 숨은 곳은 좀 걸어야 나온다. 차라리 자전거 빌려라. 아니면 걸어라. 운동도 되고 맛도 찾고 일석이조.</p>
-    <p><strong>주의:</strong> 구글 맵 평점 4.5 이상만 믿지 마라. 다 가짜다. 여기 있는 가게들은 평점 3.8~4.2 사이에서도 씹맛집 많다. 이유? 주인장이 서비스에 관심 없고 맛에만 미쳐서 그럼.</p>
-  </section>
-  <section>
-    <h2>연락처 & 미친 제보</h2>
-    <p>니가 아는 숨은 맛집 있으면 제보해라. 단, 조건이 있다.</p>
-    <ul>
-      <li>가게가 좀 괴짜여야 함 (주인장 성격 더러워도 OK, 맛이 좋으면)</li>
-      <li>체인점 말고 개인 운영</li>
-      <li>내가 직접 가서 깔 게 분명하니까 각오해라</li>
-    </ul>
-    <p>제보는 <a href="tel:010-6279-0862">010-6279-0862</a>로 전화하거나, 인스타그램 DM 보내라 (@machida_gourmet_real). 전화 안 받으면 기다리지 말고 다시 걸어라. 나는 바쁘다.</p>
-  </section>
-</main>
-<footer>
-  <p>© 2025 Machida Gourmet — 모든 내용은 내 미각이 증명한다. 무단 복제는 좆까라, 링크는 환영.</p>
-  <p>본 사이트는 브루탈리스트 디자인 시스템 + kr-neon-void 테마로 제작됨. 텍스트 크기가 불편하면 뒤로가기 눌러라.</p>
-</footer>
+
+    <!-- Header & Navigation -->
+    <header class="v-main-1wdk-container">
+        <nav class="v-item-bi6p">
+            <a href="/" class="r-ico-r2x5">MACHIDA GOURMET</a>
+            <ul class="v-main-1wdk-menu">
+                <li><a href="/" class="v-main-1wdk-link">Home</a></li>
+                <li><a href="/guide" class="v-main-1wdk-link">Guide</a></li>
+                <li><a href="/archive" class="v-main-1wdk-link">Archive</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <p style="color: var(--accent-color); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 1rem; font-weight: 700;">Critical Standard</p>
+        <h1>타협 없는 미식을 위한<br>마치다 다이닝의 정량적 기준</h1>
+        <p>많은 이들이 마치다에서 모임을 기획할 때 단순히 '분위기'와 '인지도'라는 표면적인 요소에만 현혹되곤 합니다. 그러나 진정한 미식 경험의 완성도는 식사가 끝난 뒤의 세련된 정산 과정, 돌발 상황에서의 유연한 시간 통제, 그리고 다음 방문을 위한 냉정한 사후 기록에서 결정됩니다. 우리는 타협 없는 날카로운 시각으로 마치다의 미식 인프라를 해부하여 최고의 모임을 완성하는 정밀 가이드를 제안합니다.</p>
+        <p>기준 없이 우연에 맡겨진 장소 선택은 결국 모임의 마지막 순간을 불쾌한 정산 논쟁이나 무례한 시간 압박으로 망치게 만듭니다. Machida gourmet 안내가 제시하는 엄격한 구조적 선택 기준을 통하여, 비즈니스 미팅부터 고품격 사교 모임까지 모두를 완벽하게 만족시키는 미식 통제력을 확보하십시오.</p>
+    </section>
+
+    <!-- Content Editorial Grid -->
+    <main class="editorial-grid">
+        
+        <!-- Section 1 -->
+        <article class="editorial-card">
+            <h3>01. 최종 정산 방식의 재정의</h3>
+            <p>보편적인 n분의 1 정산은 현대의 고도화된 모임 구조를 감당하기에 너무나 단순하고 비합리적입니다. 특정 인원의 주류 미소비, 뒤늦은 참석으로 인한 시간차 주문, 혹은 특정 메뉴 독점 현상 등 다양한 변수가 존재하기 때문입니다. 마치다의 선별된 다이닝 공간을 선택할 때는 사전에 명확한 정산 기준을 수립하고, 매장 측의 개별 결제 지원 여부 및 영수증 세부 분할 발행 시스템을 반드시 파악해야 합니다.</p>
+            <p>특히 사전 예약금이 요구되는 고가의 코스 요리나 한정판 다이닝의 경우, 예약금 선납 방식과 현장 추가 주문 비용의 배분 프로토콜을 명문화하는 것이 현명합니다. 이러한 디테일한 정산 설계는 참가자 모두에게 심리적 해방감을 주며, 모임의 격조를 마지막 한 순간까지 품격 있게 보존하는 결정적인 장치로 작동합니다.</p>
+        </article>
+
+        <!-- Section 2 -->
+        <article class="editorial-card">
+            <h3>02. 시간 통제 및 유연한 대응 전략</h3>
+            <p>성공적인 모임의 주최자는 시간의 지배자가 되어야 합니다. 마치다의 검증된 미식 스폿들은 대부분 2시간 내외의 타이트한 이용 시간 제한을 엄격히 적용합니다. 원활한 흐름을 유지하기 위해서는 모임 조기 종료 시 발생하는 최소 보증 금액(LTO) 규정과, 예상치 못하게 대화가 길어질 경우 현장에서 즉각 적용할 수 있는 시간 연장 옵션의 유무를 미리 점검해야 합니다.</p>
+            <p>시간 초과로 인해 급작스럽게 자리를 정리하는 상황은 주최자의 리더십 부재를 드러내는 뼈아픈 실책이 됩니다. 반대로 모임이 예상보다 조기에 마무리될 경우, 제공되지 않은 코스의 대체 포장 서비스나 차후 사용 가능한 크레딧 전환 정책을 매장 측과 사전에 협의해 두는 유연함이 필요합니다. 시간이라는 유한한 자원을 지배하는 자만이 미식의 진정한 가치를 온전히 누릴 수 있습니다.</p>
+        </article>
+
+        <!-- Section 3 -->
+        <div class="editorial-card full-width-column">
+            <h3>03. 사후 아카이빙과 다음 방문을 위한 데이터베이스화</h3>
+            <p>단발성 만족으로 끝나는 모임은 소비에 불과하지만, 철저히 기록된 모임은 자산이 됩니다. 마치다에서의 다이닝이 종료된 즉시 주최자는 해당 장소의 공간 소음 수준, 서빙 템포의 일관성, 좌석 배치에 따른 대화 집중도, 그리고 최종 결제 시의 투명성을 정량적으로 평가하여 사후 기록으로 남겨두어야 합니다. 이러한 사후 평가는 일회성 유행에 흔들리지 않는 독자적인 데이터가 됩니다.</p>
+            <p>아카이빙 과정에서는 주차 접근성 및 대중교통 연계성 같은 물리적 조건부터, 외부 소음의 차단 정도나 매장 스태프의 밀착 응대 태도까지 세밀하게 기록하십시오. 축적된 데이터는 다음 모임을 기획할 때 시행착오를 제로에 수렴하게 만드는 강력한 무기가 되며, 종극에는 당신만의 독점적이고 신뢰할 수 있는 마치다 미식 바이블을 완성하는 단단한 기초가 될 것입니다.</p>
+            
+            <ul class="styled-list">
+                <li><strong>소음도 및 프라이버시:</strong> 대화의 깊이를 결정하는 독립된 룸의 차음성 및 배경 음악 데시벨 측정.</li>
+                <li><strong>서빙 프로토콜:</strong> 메뉴 간 간격이 대화의 흐름을 끊지 않는지, 식기 교체 타이밍이 매끄러운지 평가.</li>
+                <li><strong>결제 및 영수증 유연성:</strong> 법인카드 분할 결제, 사전 송금 영수증 처리의 간결함 확인.</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <h2 style="text-align: center; margin-bottom: var(--spacing-lg);">자주 묻는 핵심 질문 (FAQ)</h2>
+            
+            <div class="faq-item">
+                <h3>Q. 갑작스러운 인원 변동 시 위약금 방어 기준은 어떻게 설정해야 합니까?</h3>
+                <p>마치다의 주요 파인 다이닝 기준, 예약일 기준 최소 3일 전 취소 시에는 예약금 전액 환불이 기본입니다. 그러나 당일 인원 감소의 경우, 예약된 코스 요리의 재료 준비 비용 명목으로 인원당 최소 50%에서 최대 100%의 위약금이 청구될 수 있습니다. 따라서 예약 단계에서 인원 조정 가능 마감 시각을 서면으로 확약받는 것이 가장 확실한 방어 기제입니다.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q. 콜키지 서비스 이용 시 정산의 투명성을 높이는 방법은 무엇입니까?</h3>
+                <p>콜키지 차지는 병당 정액 요금을 부과하는 방식과 전체 결제 금액의 일정 비율을 청구하는 방식으로 나뉩니다. 반입할 주류의 종류(와인, 사케, 위스키 등)에 따라 잔 교체 횟수와 핸들링 비용이 다르게 책정될 수 있으므로, 예약 시 반입 주류 정보를 미리 공유하고 최종 청구서에 반영될 정확한 콜키지 단가를 사전 확정받아야 정산 시의 불필요한 마찰을 원천 차단할 수 있습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <p>&copy; Machida Gourmet Guide. All Rights Reserved. 본 정보는 마치다 지역의 올바른 다이닝 문화 정착을 위해 객관적 기준을 바탕으로 작성되었습니다.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
