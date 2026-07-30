@@ -1,10 +1,5 @@
 User-agent: *
 Allow: /
 
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-Sitemap: https://machida-food-local.pbn-builder.xyz/sitemap.xml
+Sitemap: https://idae-massage-note.water-server.store/sitemap.xml
+Sitemap: https://idae-massage-note.water-server.store/sitemap-pages.xml
